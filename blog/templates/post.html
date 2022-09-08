@@ -48,20 +48,18 @@ body {
 <body>
 
 <div class="header">
-  <h2>Tamir's Blog</h2>
+  <h1><a style="text-decoration: none; color: black;" href="/">Tamir's Blog</a></h1>
+  
 </div>
 
 <div class="row">
   <div class="leftcolumn">
-    {% for post in posts reversed %}
     <div class="card">
-      <a style="text-decoration: none; color: black;" href="/post/{{post.id}}"> 
-        <h2>{{post.title}}</h2>
-        <h5>{{post.created_at}}</h5>
-        <p>{{post.body|truncatewords:20}}</p>
+        <h1>{{specific_post.title}}</h1>
+        <h5>{{specific_post.created_at}}</h5>
+        <p>{{specific_post.body}}</p>
       </a>
     </div>
-    {% endfor %}
   </div>
 </div>
 

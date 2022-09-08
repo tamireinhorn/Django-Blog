@@ -8,3 +8,8 @@ from .models import Post
 def index(request):
     posts = Post.objects.all()
     return render(request, 'index.html', {'posts': posts})
+
+
+def post(request, post_id: int):
+    specific_post = Post.objects.get(id = post_id)
+    return render(request, 'post.html', {'specific_post': specific_post})
