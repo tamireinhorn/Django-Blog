@@ -10,7 +10,12 @@
             <h1><a href="/">Tamir's Blog</a></h1>
         </div>
         <h2>This is supposed to be the weather page</h2>
-
+       <div class = 'wrap'> <form method="post">
+         {% csrf_token %}
+            <input type="text" name = 'city' placeholder = 'Search'>
+            <button type="submit" class="searchButton">
+        </form></div>
+       
     </body>
 
 
