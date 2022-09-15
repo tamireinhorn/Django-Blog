@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-    {% load static %}
+        {% load static %}
     <!-- Template Main CSS File -->
         <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
     </head>
@@ -12,23 +12,17 @@
         <br>
         <br>
        <center class = 'row'>
-        <form action="" method = "post" class = "search_form">
-            {% csrf_token %}
-            <div class = "search_group">
-            <input type="text" class = "search_input" name = "city" placeholder = "Search">
-             <div class = "search_button_group">
-                <button class = "search_button" type = "submit">
-                    <i class = "glyphicon glyphicon-search"></i>
-                </button>
-             </div>
-            </div>
-        </form>
-            
-
-       </center>
-       
+            <form action="" method = "post" class = "search_form">
+                {% csrf_token %}
+                <div class = "search_group">
+                    <input type="text" class = "search_input" name = "city" placeholder = "Search">
+                    <div class = "search_button_group">
+                        <button class = "search_button" type = "submit">
+                            <i class = "glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+       </center>       
     </body>
-
-
-
 </html>

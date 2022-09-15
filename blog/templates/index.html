@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 {% load static %}
     <!-- Template Main CSS File -->
-        <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
 </head>
 <body>
-
   <div class="header">
-    <div class="header_1"><div></div></div>
+    <div class="header_1">
+      <!-- Empty div to make use of flexbox inside flexbox for alignment-->
+    </div>
     <div class="header_2">
     <h2>Tamir's Blog</h2> 
     </div>
-    <div class="header_3"><nav class = "nav_bar">
-    
-    
-      <ul>
-        <li><a href="/weather">Weather</a></li>
-      </ul>
-   
-    </nav>
+    <div class="header_3">
+      <nav class = "nav_bar">
+        <ul>
+          <li><a href="/weather">Weather</a></li>
+        </ul>
+      </nav>
     </div>
   </div>
-  
   <div class="row">
     <div class="leftcolumn">
       {% for post in posts reversed %}
@@ -37,6 +35,5 @@
       {% endfor %}
     </div>
   </div>
-
 </body>
 </html>
